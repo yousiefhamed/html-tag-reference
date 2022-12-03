@@ -4,42 +4,211 @@
     <title>HTML Tag Refrences</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
         body {
             font-family: monospace;
+
             font-size: 20px;
-            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            /*background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);*/
+            background-color: aliceblue;
+        }
+
+        header {
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            background-color: aquamarine;
+            font-family: cursive;
+            text-align: center;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 100%;
+            height: auto;
+        }
+
+        .category {
+            width: 95%;
+
+            justify-content: space-evenly;
+
+            margin-left: 5%;
+        }
+
+        .category h2 {
+            width: 100%;
+        }
+
+        .category h2 small {
+            color: red;
+
+            font-size: 0.5em;
+
+            width: 100%;
+            height: auto;
+        }
+
+        .category .html-tags {
+            width: 95%;
+
+            justify-content: flex-start;
+
+            margin-left: 5%;
+        }
+
+        .html-tags {
+            width: 100%;
+            height: auto;
+        }
+
+        .html-tags section {
+            width: 100%;
+            height: auto;
+        }
+
+        .html-tags section h3 {
+            width: 100%;
+            height: auto;
+        }
+
+        .html-tags section div {
+            width: 100%;
+            height: auto;
+        }
+
+        .html-tags section div p {
+            cursor: pointer;
+
+            width: 100%;
+            height: auto;
+        }
+
+        .html-tags section div p ul {
+            width: 95%;
+            height: auto;
+
+            justify-content: flex-start;
+
+            margin-top: 5px;
+            margin-left: 5%;
+        }
+
+        .html-tags section div p ul li {
+            list-style: none;
+            font-family: 'Harmattan', sans-serif;
+            line-height: 20px;
+
+            width: 100%;
+            height: auto;
+
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
-    <div id="htmlTagRefrenceDiv">
-    </div>
+    <header>
+        <h1>El-Team El-Gamed</h1>
+    </header>
+
+    <main>
+        <div class="category flex">
+            <h2>HTML Tag Refrences ===> <br><small>click on the tag to see a small explanation</small></h2>
+
+            <div id="htmlTagRefrenceDiv" class="html-tags flex">
+            </div>
+        </div>
+    </main>
 
     <script>
         let htmlTagRefrences = [
             {
                 name: '!DOCTYPE html', //html tag
                 attributes: [''], //attributes of the tag
-                explanation: 'ده اللي بيعرف الbrowser انا شغال علي انهي version من الhtml وطبعا احنا شغالين علي html5 versionاللي هي احدث واحدة', //explanation of the tag
+                explanation: ['ده اللي بيعرف الbrowser انا شغال علي انهي version من الhtml وطبعا احنا شغالين علي html5 versionاللي هي احدث واحدة', 'fggg ffghfshf gfgff fygfgf gfuasgfsf  gdsaug', 'fhjkfhhf fhfhfhf fufhhhتهلتتابلهت لتت س تل تسخ  '], //explanation of the tag
                 section: 'Basic HTML', //category of the tag
                 endTag: false, //check if it has end tag
             },
             {
-                name: '', //html tag
-                attributes: ['', ''], //attributes of the tag
-                explanation: '', //explanation of the tag
-                section: '', //category of the tag
+                name: 'html', //html tag
+                attributes: [], //attributes of the tag
+                explanation: ['منطقيا كده احنا بنكتب html فاول element عندنا بيكون <html></html> وده اللي هنحط فيه كل الelements بمعني ان مفيش في اللغة كلها غير حرفيا element واحد اللي هو <!DOCTYPE html> بيتكتب قبله'], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
                 endTag: true, //check if it has end tag
+            },
+            {
+                name: 'head', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: true, //check if it has end tag
+            },
+            {
+                name: 'title', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: true, //check if it has end tag
+            },
+            {
+                name: 'body', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: true, //check if it has end tag
+            },
+            {
+                name: 'h1', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: true, //check if it has end tag
+            },
+            {
+                name: 'p', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: true, //check if it has end tag
+            },
+            {
+                name: 'br', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: false, //check if it has end tag
+            },
+            {
+                name: 'hr', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: false, //check if it has end tag
+            },
+            {
+                name: '!-- comment --', //html tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: false, //check if it has end tag
             },
             /*{
                 name: '', //html tag
-                attributes: ['', ''], //attributes of the tag
-                explanation: '', //explanation of the tag
+                attributes: [], //attributes of the tag
+                explanation: [], //explanation of the tag
                 section: '', //category of the tag
                 endTag: true, //check if it has end tag
             },*/
@@ -57,30 +226,45 @@
             let newSection = document.createElement('section');
             htmlTagRefrenceDiv.appendChild(newSection);
             newSection.id = 'section';
-            let newH1 = document.createElement('h1');
+            let newH3 = document.createElement('h3');
             let newHeading = document.createTextNode(x);
-            newSection.appendChild(newH1);
-            newH1.appendChild(newHeading);
+            newSection.appendChild(newH3);
+            newH3.appendChild(newHeading);
             for (const htmlTagRefrence of htmlTagRefrences) {
                 if (x == htmlTagRefrence.section) {
                     let newDiv = document.createElement('div');
                     let newP = document.createElement('p');
-                    newP.addEventListener( 'click', () => {alert(htmlTagRefrence.explanation)});
+                    newP.addEventListener( 'click', () => {
+                        if (newP.childElementCount >= 1) {
+                            newP.removeChild(newP.lastChild);
+                        } else {
+                            let newUl = document.createElement('ul');
+                            newP.appendChild(newUl);
+                            for (let explain of htmlTagRefrence.explanation) {
+                                let newLi = document.createElement('li');
+                                let anotherContent = document.createTextNode(explain);
+                                newUl.appendChild(newLi);
+                                newLi.appendChild(anotherContent);
+                                newLi.style.direction = 'rtl';
+                            }
+                        }
+                    });
                     let newContent;
                     let attr = '';
                     for (let i = 0; i < htmlTagRefrence.attributes.length; i++) {
                         attr += `${htmlTagRefrence.attributes[i]}=""`;
                     }
                     if (htmlTagRefrence.endTag) {
-                        newContent = document.createTextNode(`<${htmlTagRefrence.name} ${attr}></${htmlTagRefrence.name}>`);
+                        newContent = document.createTextNode(`\u{1F609}<${htmlTagRefrence.name}${attr}> </${htmlTagRefrence.name}>`);
                     } else {
-                        newContent = document.createTextNode(`<${htmlTagRefrence.name}>`);
+                        newContent = document.createTextNode(`\u{1F609}<${htmlTagRefrence.name}>`);
                     }
                     newSection.appendChild(newDiv);
                     newDiv.appendChild(newP);
                     newP.appendChild(newContent);
                 }
             }
+            newSection.style.borderBottom = '3px solid';
         })
     </script>
 </body>
