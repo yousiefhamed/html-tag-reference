@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Tag Refrences</title>
+
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 20px;
+            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            /*background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);*/
+        }
+    </style>
+</head>
+<body>
+    <div id="htmlTagRefrenceDiv">
+    </div>
+
+    <script>
+        let htmlTagRefrences = [
+            {
+                name: '!DOCTYPE html', //html tag
+                attributes: [''], //attributes of the tag
+                explanation: 'ده اللي بيعرف الbrowser انا شغال علي انهي version من الhtml وطبعا احنا شغالين علي html5 versionاللي هي احدث واحدة', //explanation of the tag
+                section: 'Basic HTML', //category of the tag
+                endTag: false, //check if it has end tag
+            },
+            {
+                name: '', //html tag
+                attributes: ['', ''], //attributes of the tag
+                explanation: '', //explanation of the tag
+                section: '', //category of the tag
+                endTag: true, //check if it has end tag
+            },
+            /*{
+                name: '', //html tag
+                attributes: ['', ''], //attributes of the tag
+                explanation: '', //explanation of the tag
+                section: '', //category of the tag
+                endTag: true, //check if it has end tag
+            },*/
+        ];
+        const htmlTagRefrenceDiv = document.getElementById('htmlTagRefrenceDiv');
+
+        let sections = new Set();
+        for (const htmlTagRefrence of htmlTagRefrences) {
+            if (sections.has(htmlTagRefrence.section)) {
+            } else {
+                sections.add(htmlTagRefrence.section);
+            }
+        }
+        sections.forEach((x) => {
+            let newSection = document.createElement('section');
+            htmlTagRefrenceDiv.appendChild(newSection);
+            newSection.id = 'section';
+            let newH1 = document.createElement('h1');
+            let newHeading = document.createTextNode(x);
+            newSection.appendChild(newH1);
+            newH1.appendChild(newHeading);
+            for (const htmlTagRefrence of htmlTagRefrences) {
+                if (x == htmlTagRefrence.section) {
+                    let newDiv = document.createElement('div');
+                    let newP = document.createElement('p');
+                    newP.addEventListener( 'click', () => {alert(htmlTagRefrence.explanation)});
+                    let newContent;
+                    let attr = '';
+                    for (let i = 0; i < htmlTagRefrence.attributes.length; i++) {
+                        attr += `${htmlTagRefrence.attributes[i]}=""`;
+                    }
+                    if (htmlTagRefrence.endTag) {
+                        newContent = document.createTextNode(`<${htmlTagRefrence.name} ${attr}></${htmlTagRefrence.name}>`);
+                    } else {
+                        newContent = document.createTextNode(`<${htmlTagRefrence.name}>`);
+                    }
+                    newSection.appendChild(newDiv);
+                    newDiv.appendChild(newP);
+                    newP.appendChild(newContent);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
